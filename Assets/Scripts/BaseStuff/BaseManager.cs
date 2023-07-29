@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class BaseManager : MonoBehaviour
     void Update()
     {
 		if (Time.timeSinceLevelLoad > EndTime) {
-			// Change to endscreen
+			SceneManager.LoadScene(1);
 			this.gameObject.SetActive(false);
 		} else if (Time.timeSinceLevelLoad > Base3SpawnTime && _stage == 2) {
 			_Base3.SetActive(true);
