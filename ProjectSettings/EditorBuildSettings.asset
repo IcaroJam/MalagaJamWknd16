@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Final1.unity
+    path: Assets/Scenes/MidEnding.unity
     guid: 1b15fc95eae10da4b830aa6ae71ecbb1
   - enabled: 1
-    path: Assets/Scenes/Final2.unity
+    path: Assets/Scenes/BadEnding.unity
     guid: a8a4dd6b4b3e9b04db16dc9438781789
+  - enabled: 1
+    path: Assets/Scenes/TrueEnding.unity
+    guid: 6b1d116e614dfd545a4f9583145c477e
   m_configObjects: {}

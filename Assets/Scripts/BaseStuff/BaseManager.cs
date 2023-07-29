@@ -32,7 +32,7 @@ public class BaseManager : MonoBehaviour
     void Update()
     {
 		if (Time.timeSinceLevelLoad > EndTime) {
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene("TrueEnding");
 			this.gameObject.SetActive(false);
 		} else if (Time.timeSinceLevelLoad > Base3SpawnTime && _stage == 2) {
 			_Base3.SetActive(true);
