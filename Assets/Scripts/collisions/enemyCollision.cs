@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class enemyCollision : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
-    public AudioSource Clip;
     
     // Start is called before the first frame update
     void Start()
@@ -24,10 +23,6 @@ public class enemyCollision : MonoBehaviour
         if (collision.gameObject.name == "Planet")
         {
             Destroy(gameObject);
-            if (clip != null)
-            {
-                Clip.Play();
-            }
         }
         else if (collision.transform.GetComponent<Shoot>() || collision.gameObject.name == "Shield")
             Destroy(gameObject);
