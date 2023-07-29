@@ -19,12 +19,12 @@ public class enemyCollision : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.name == "Planet") {
-            Destroy(enemy);
-        }
-        else if (collision.gameObject.name == "Base") {
-            Destroy(enemy);
-        }
+        if (collision.gameObject.name == "Planet")
+            Destroy(gameObject);
+        else if (collision.transform.GetComponent<Shoot>() || collision.gameObject.name == "Shield")
+            Destroy(gameObject);
+		else if (collision.transform.GetComponent<Projectile>())
+			Destroy(gameObject);
     }
 
 }
