@@ -26,4 +26,6 @@ public class PlanetCounter : MonoBehaviour
 		if (_hits >= _hitsToEnd)
 			Debug.Log("EARTH'S DEAD!");
 	}
+
+	public uint Hits => _hits;
 }
