@@ -949,6 +949,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6964955156067462265, guid: ad34b7eeee174d441989978218633dfd, type: 3}
+      propertyPath: spawnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964955156067462265, guid: ad34b7eeee174d441989978218633dfd, type: 3}
+      propertyPath: spawnTime2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964955156067462265, guid: ad34b7eeee174d441989978218633dfd, type: 3}
+      propertyPath: spawnTime3
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8047577011254848860, guid: ad34b7eeee174d441989978218633dfd, type: 3}
       propertyPath: m_Name
       value: Gen_enemies
