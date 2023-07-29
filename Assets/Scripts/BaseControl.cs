@@ -18,14 +18,14 @@ public class BaseControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMovement();
+        HandleMovement(Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.S));
     }
 
-	void HandleMovement()
+	void HandleMovement(bool _left, bool _right)
 	{
-		if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
+		if (_left && !_right)
 			_speed += accel;
-		else if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
+		else if (!_left && _right)
 			_speed -= accel;
 		else
 			_speed = Mathf.Lerp(_speed, 0, Time.deltaTime * deccel);
