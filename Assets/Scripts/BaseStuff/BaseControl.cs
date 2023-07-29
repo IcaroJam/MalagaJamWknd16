@@ -8,6 +8,8 @@ public class BaseControl : MonoBehaviour
 	public float	accel;
 	public float	deccel;
 	public float	maxSpeed;
+	public KeyCode	leftKey;
+	public KeyCode	rightKey;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class BaseControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMovement(Input.GetKey(KeyCode.A), Input.GetKey(KeyCode.S));
+        HandleMovement(Input.GetKey(leftKey), Input.GetKey(rightKey));
     }
 
 	void HandleMovement(bool _left, bool _right)
