@@ -438,6 +438,8 @@ MonoBehaviour:
   accel: 5
   deccel: 8
   maxSpeed: 150
+  leftKey: 103
+  rightKey: 104
 --- !u!4 &907451281
 Transform:
   m_ObjectHideFlags: 0
@@ -609,6 +611,8 @@ MonoBehaviour:
   accel: 5
   deccel: 8
   maxSpeed: 150
+  leftKey: 97
+  rightKey: 115
 --- !u!4 &1405280805
 Transform:
   m_ObjectHideFlags: 0
