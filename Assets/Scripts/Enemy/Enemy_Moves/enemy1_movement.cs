@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy1_movement : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
     public float speed;
     private float distance;
 
