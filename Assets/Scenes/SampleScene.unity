@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c7785f1f23a574384ac4ecee8bba80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accel: 5
+  accel: 24
   deccel: 8
   maxSpeed: 200
   leftKey: 97
@@ -778,6 +778,7 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 2603148568149325555, guid: 6ecfe63a290032b419a2ca0627d3784e, type: 3}
   _rb: {fileID: 1793232185}
   _spawnPoint: {fileID: 1878218241}
+  _fireCadence: 0.6
 --- !u!50 &1793232185
 Rigidbody2D:
   serializedVersion: 4
@@ -1172,3 +1173,4 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 2603148568149325555, guid: 6ecfe63a290032b419a2ca0627d3784e, type: 3}
   _rb: {fileID: 2107714352}
   _spawnPoint: {fileID: 779767123}
+  _fireCadence: 0.5

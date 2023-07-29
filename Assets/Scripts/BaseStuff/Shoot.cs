@@ -7,11 +7,12 @@ public class Shoot : MonoBehaviour
 	[SerializeField] private Projectile		_projectilePrefab;
 	[SerializeField] private Rigidbody2D	_rb;
 	[SerializeField] private Transform		_spawnPoint;
+	[SerializeField] private float			_fireCadence;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("shoot", 1, 1);
+        InvokeRepeating("shoot", 1, _fireCadence);
     }
 
     // Update is called once per frame
