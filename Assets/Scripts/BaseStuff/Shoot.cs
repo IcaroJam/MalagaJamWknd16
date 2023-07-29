@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-	[SerializeField] private Projectile	_projectilePrefab;
-	[SerializeField] private Transform	_spawnPoint;
+	[SerializeField] private Projectile		_projectilePrefab;
+	[SerializeField] private Rigidbody2D	_rb;
+	[SerializeField] private Transform		_spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,6 @@ public class Shoot : MonoBehaviour
 
 	private void shoot()
 	{
-		Instantiate(_projectilePrefab, _spawnPoint.position, Quaternion.identity).Init(transform.right);
+		Instantiate(_projectilePrefab, _spawnPoint.position, Quaternion.identity).Init((Vector2)transform.right + _rb.velocity);
 	}
 }
