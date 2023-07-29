@@ -170,7 +170,7 @@ MonoBehaviour:
   Base1SpawnTime: 0
   Base2SpawnTime: 65
   Base3SpawnTime: 124
-  EndTime: 2
+  EndTime: 240
 --- !u!1 &138590408
 GameObject:
   m_ObjectHideFlags: 0

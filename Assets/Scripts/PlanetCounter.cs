@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlanetCounter : MonoBehaviour
 {
@@ -23,8 +24,10 @@ public class PlanetCounter : MonoBehaviour
 	{
 		_hits++;
 
-		if (_hits >= _hitsToEnd)
+		if (_hits >= _hitsToEnd) {
 			Debug.Log("EARTH'S DEAD!");
+			SceneManager.LoadScene("BadEnding");
+		}
 	}
 
 	public uint Hits => _hits;
