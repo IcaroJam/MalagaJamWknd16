@@ -6,6 +6,9 @@ public class ShakeBody : MonoBehaviour
 {
     private Vector3 _originalPos;
     public float shakeFrequency = default;
+    public AudioSource audioSource;
+    public AudioClip shakeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,11 @@ public class ShakeBody : MonoBehaviour
 
 		while (secs < 0.2f) {
         	transform.position = _originalPos + Random.insideUnitSphere * shakeFrequency;
-			secs += Time.deltaTime;
+            if (audioSource && shakeSound)
+            {
+                audioSource.PlayOneShot(shakeSound);
+            }
+            secs += Time.deltaTime;
 			yield return null;
 		}
 		StopShake();
