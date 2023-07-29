@@ -8,31 +8,40 @@ public class enemy_Generator : MonoBehaviour
     [SerializeField] private GameObject enemy2;
     [SerializeField] private GameObject enemy3;
     [SerializeField] private Transform[] zones;
-    [SerializeField] private float spawnTime = 3f;
-    [SerializeField] private float spawnTime2 = 4f;
-    [SerializeField] private float spawnTime3 = 6f;
+    public float spawnTime1;
+    public float spawnTime2;
+    public float spawnTime3;
 
     // Start is called before the first frame update
     void Start()
-    { 
-        InvokeRepeating("SpawnEnemy1", 0f, spawnTime);
-        InvokeRepeating("SpawnEnemy2", 0f, spawnTime2);
-        InvokeRepeating("SpawnEnemy3", 0f, spawnTime3);
+    {
+		StartCoroutine(SpawnEnemy1());
+		StartCoroutine(SpawnEnemy2());
+		StartCoroutine(SpawnEnemy3());
     }
 
-    private void SpawnEnemy1()
+    IEnumerator SpawnEnemy1()
     {
-        Instantiate(enemy1, OneRandomZone(), Quaternion.identity);
+		while (true) {
+			yield return new WaitForSeconds(spawnTime1);
+        	Instantiate(enemy1, OneRandomZone(), Quaternion.identity);
+		}
     }
 
-    private void SpawnEnemy2()
+    IEnumerator SpawnEnemy2()
     {
-        Instantiate(enemy2, OneRandomZone(), Quaternion.identity);
+        while (true) {
+			yield return new WaitForSeconds(spawnTime2);
+        	Instantiate(enemy2, OneRandomZone(), Quaternion.identity);
+		}
     }
 
-    private void SpawnEnemy3()
+    IEnumerator SpawnEnemy3()
     {
-        Instantiate(enemy3, OneRandomZone(), Quaternion.identity);
+        while (true) {
+			yield return new WaitForSeconds(spawnTime3);
+        	Instantiate(enemy3, OneRandomZone(), Quaternion.identity);
+		}
     }
 
     private Vector3 OneRandomZone()
