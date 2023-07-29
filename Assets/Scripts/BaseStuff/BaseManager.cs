@@ -26,12 +26,13 @@ public class BaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad > Base1SpawnTime)
-			_Base1.SetActive(true);
-        if (Time.timeSinceLevelLoad > Base2SpawnTime)
-			_Base2.SetActive(true);
-	    if (Time.timeSinceLevelLoad > Base3SpawnTime)
+		if (Time.timeSinceLevelLoad > Base3SpawnTime) {
 			_Base3.SetActive(true);
+			this.gameObject.SetActive(false);
+		} else if (Time.timeSinceLevelLoad > Base2SpawnTime)
+			_Base2.SetActive(true);
+		else if (Time.timeSinceLevelLoad > Base1SpawnTime)
+			_Base1.SetActive(true);
     }
     
     void Awake()
