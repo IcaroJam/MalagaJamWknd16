@@ -7,6 +7,7 @@ public class enemy_Generator : MonoBehaviour
     [SerializeField] private GameObject enemy1;
     [SerializeField] private GameObject enemy2;
     [SerializeField] private GameObject enemy3;
+    [SerializeField] private Transform[] zones;
     [SerializeField] private float spawnTime = 3f;
     [SerializeField] private float spawnTime2 = 4f;
     [SerializeField] private float spawnTime3 = 6f;
@@ -21,16 +22,21 @@ public class enemy_Generator : MonoBehaviour
 
     private void SpawnEnemy1()
     {
-        Instantiate(enemy1, new Vector2(Random.Range(-15f, 15f), Random.Range(-15f, 15f)), Quaternion.identity);
+        Instantiate(enemy1, OneRandomZone(), Quaternion.identity);
     }
 
     private void SpawnEnemy2()
     {
-        Instantiate(enemy2, new Vector2(Random.Range(-30f, 30f), Random.Range(-30f, 30f)), Quaternion.identity);
+        Instantiate(enemy2, OneRandomZone(), Quaternion.identity);
     }
 
     private void SpawnEnemy3()
     {
-        Instantiate(enemy3, new Vector2(Random.Range(-30f, 30f), Random.Range(-30f, 30f)), Quaternion.identity);
+        Instantiate(enemy3, OneRandomZone(), Quaternion.identity);
+    }
+
+    private Vector3 OneRandomZone()
+    {
+        return zones[Random.Range(0, zones.Length)].position;
     }
 }
