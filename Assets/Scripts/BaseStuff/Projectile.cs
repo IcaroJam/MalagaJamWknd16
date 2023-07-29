@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
 	{
 		_parentName = parName;
 		_rb.velocity = dir * _speed;
+		_rb.transform.right = dir;
 
 		Destroy(gameObject, 3);
 	}
