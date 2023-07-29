@@ -29,5 +29,4 @@ public class enemyCollision : MonoBehaviour
 		else if (collision.transform.GetComponent<Projectile>())
 			Destroy(gameObject);
     }
-
 }

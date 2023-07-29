@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8263919095751274843}
   - component: {fileID: 7139772761604724156}
   - component: {fileID: 4610262465316557319}
+  - component: {fileID: 407015983543835933}
   m_Layer: 0
   m_Name: enemy_1
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a08be96e530c24ea20254098f778fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 0.5
 --- !u!50 &8263919095751274843
 Rigidbody2D:
   serializedVersion: 4
@@ -83,7 +84,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1998877525460417234}
-  clip: {fileID: 4610262465316557319}
 --- !u!82 &4610262465316557319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,6 +180,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &407015983543835933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998877525460417234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3e5f47a87eab04e86b13915e89cbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.1
+  rotationSpeed: 400
 --- !u!1 &8102753304800054949
 GameObject:
   m_ObjectHideFlags: 0
