@@ -33,8 +33,12 @@ public class BaseManager : MonoBehaviour
 		if (Time.timeSinceLevelLoad > EndTime) {
 			// Change to endscreen
 			this.gameObject.SetActive(false);
-		} else if (Time.timeSinceLevelLoad > Base3SpawnTime) {
+		} else if (Time.timeSinceLevelLoad > Base3SpawnTime && _stage == 2) {
 			_Base3.SetActive(true);
+			_FoeGenerator.spawnTime1 /= 2;
+			_FoeGenerator.spawnTime2 /= 2;
+			_FoeGenerator.spawnTime3 /= 2;
+			_stage++;
 		} else if (Time.timeSinceLevelLoad > Base2SpawnTime && _stage == 1) {
 			_Base2.SetActive(true);
 			_FoeGenerator.spawnTime1 /= 2;

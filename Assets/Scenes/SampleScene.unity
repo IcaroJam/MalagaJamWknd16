@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Base1SpawnTime: 0
-  Base2SpawnTime: 10
-  Base3SpawnTime: 20
-  EndTime: 30
+  Base2SpawnTime: 65
+  Base3SpawnTime: 124
+  EndTime: 240
 --- !u!1 &138590408
 GameObject:
   m_ObjectHideFlags: 0
