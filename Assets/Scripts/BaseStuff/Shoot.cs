@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("shoot", 0, 1);
+        InvokeRepeating("shoot", 1, 1);
     }
 
     // Update is called once per frame
@@ -22,6 +22,6 @@ public class Shoot : MonoBehaviour
 
 	private void shoot()
 	{
-		Instantiate(_projectilePrefab, _spawnPoint.position, Quaternion.identity).Init((Vector2)transform.right + _rb.velocity);
+		Instantiate(_projectilePrefab, _spawnPoint.position, Quaternion.identity).Init(transform.right, gameObject.name);
 	}
 }
