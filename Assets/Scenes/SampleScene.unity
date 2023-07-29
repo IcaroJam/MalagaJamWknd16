@@ -689,6 +689,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 336442376777492653, guid: 06cd97025761f1742813255b318279af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 336442376777492653, guid: 06cd97025761f1742813255b318279af, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 336442377673385681, guid: 06cd97025761f1742813255b318279af, type: 3}
       propertyPath: m_Name
       value: img_fondo
