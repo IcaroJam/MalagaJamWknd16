@@ -23,9 +23,9 @@ public class BaseControl : MonoBehaviour
 
 	void HandleMovement()
 	{
-		if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S))
 			_speed += accel;
-		else if (Input.GetKey(KeyCode.S))
+		else if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
 			_speed -= accel;
 		else
 			_speed = Mathf.Lerp(_speed, 0, Time.deltaTime * deccel);
