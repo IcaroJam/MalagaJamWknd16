@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Base1SpawnTime: 0
-  Base2SpawnTime: 64
+  Base2SpawnTime: 60
   Base3SpawnTime: 120
   EndTime: 244
 --- !u!1001 &132670817
@@ -960,7 +960,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f4ba761d3dd12f3478b0738d1d52ed9d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
