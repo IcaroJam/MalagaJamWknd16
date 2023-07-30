@@ -8,6 +8,7 @@ public class TextTyper : MonoBehaviour
 	private TMP_Text				_txtRef;
 	private string					_textToPrint;
 	[SerializeField] private float	_printTime;
+	[SerializeField] private bool	_printOnStart;
 
 	void Awake()
 	{
@@ -19,7 +20,8 @@ public class TextTyper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		
+		if (_printOnStart)
+			StartCoroutine(printIt());
     }
 
 	public void printText(string toPrint)
@@ -29,7 +31,7 @@ public class TextTyper : MonoBehaviour
 		StopAllCoroutines();
 		StartCoroutine(printIt());
 	}
-	
+
 	IEnumerator printIt()
 	{
 		for (int i = 0; i < _textToPrint.Length; i++) {
