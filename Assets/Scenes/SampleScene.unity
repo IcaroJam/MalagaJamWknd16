@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Base1SpawnTime: 0
-  Base2SpawnTime: 60
+  Base2SpawnTime: 64
   Base3SpawnTime: 120
   EndTime: 244
 --- !u!1001 &132670817
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2994dd23379d1a448721c49a5c544c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitsToEnd: 20
+  _hitsToEnd: 10
 --- !u!114 &292815049
 MonoBehaviour:
   m_ObjectHideFlags: 0
