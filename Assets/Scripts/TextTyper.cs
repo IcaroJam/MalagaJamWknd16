@@ -19,9 +19,17 @@ public class TextTyper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(printIt());
+		
     }
 
+	public void printText(string toPrint)
+	{
+		_txtRef.text = string.Empty;
+		_textToPrint = toPrint;
+		StopAllCoroutines();
+		StartCoroutine(printIt());
+	}
+	
 	IEnumerator printIt()
 	{
 		for (int i = 0; i < _textToPrint.Length; i++) {
